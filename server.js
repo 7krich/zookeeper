@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const { animals } = require('./data/animals');
 const express = require('express');
+const { animals } = require('./data/animals');
+
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -36,7 +37,7 @@ function filterByQuery(query, animalsArray) {
         );
       });
     }
-    if(query.diet) {
+    if (query.diet) {
         filteredResults = filteredResults.filer(animal => animal.diet === query.diet);
     }
     if (query.species) {
@@ -91,7 +92,7 @@ app.get('/api/animals', (req, res) => {
 
 app.get('/api/animals/:id', (req, res) => {
     const result = findById(req.params.id, animals);
-    if(result) {
+    if (result) {
         res.json(result);
     // if no record animals exists return 404 error
     } else {
@@ -114,5 +115,5 @@ app.post('/api/animals', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}`);
+    console.log(`API server now on port ${PORT}!`);
 });
