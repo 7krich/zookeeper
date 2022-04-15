@@ -135,6 +135,15 @@
         "anxious"
       ],
       "id": "13"
+    },
+    {
+      "name": "rexono",
+      "species": "Dinosaur",
+      "diet": "carnivore",
+      "personalityTraits": [
+        "anxious"
+      ],
+      "id": "14"
     }
   ]
 }
