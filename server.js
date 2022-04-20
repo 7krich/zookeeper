@@ -17,7 +17,7 @@ app.use(express.json());
 
 // when client navigates to host/api app will use router set up in apiRoutes
 app.use('/api', apiRoutes);
-// if / is the endpoint router weill serve back HTML routes
+// if / is the endpoint router will serve back HTML routes
 app.use('/', htmlRoutes);
 
 app.listen(PORT, () => {
